@@ -1,0 +1,23 @@
+{
+  "main": "webserver.js",
+  "scripts": {
+    "server": "nodemon webserver.js",
+    "start": "node webserver.js",
+    "frontend-install": "npm install --prefix frontend",
+    "frontend": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run frontend\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "concurrently": "^4.1.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "nodemon": "^2.0.2",
+    "npm": "^6.10.3",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "validator": "^11.1.0"
+  }
+}
